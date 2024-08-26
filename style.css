@@ -1,0 +1,139 @@
+body {
+    font-family: 'Corben', Georgia, Times, serif;
+    background-image: linear-gradient(to bottom, #f2f2f2, #fff);
+    color: #333; /* Set default text color */
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.heart:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+#message {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Added smooth transition */
+}
+
+#surprise-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Added smooth transition */
+}
+
+#surprise-btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Existing styles remain unchanged */
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.floating-hearts::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('foto/hati.jpeg') repeat;
+    animation: floating 10s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes floating {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.love-note {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Dancing Script', cursive;
+    color: #ff69b4;
+}
+
+.love-note h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.love-note p {
+    font-size: 24px;
+    margin: 0;
+    padding: 0 20px;
+    transition: all 0.3s ease; /* Added smooth transition */
+}
+
+/* Media Query for Phones */
+@media only screen and (max-width: 600px) {
+
+   h1{
+       margin-left: 35%;
+       margin-right: 35%;
+       font-size: 36px;
+   }
+    .heart-container {
+        height: 150px;
+    }
+
+    .heart {
+        width: 75px;
+        height: 75px;
+    }
+
+    #message {
+        font-size: 20px;
+    }
+
+    #surprise-btn {
+        padding: 8px 16px;
+        margin-left: 35%;
+        margin-right: 35%;
+
+    }
+
+    .love-note h2 {
+        font-size: 30px;
+    }
+
+    .love-note p {
+        font-size: 20px;
+    }
+}
